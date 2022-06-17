@@ -1,0 +1,35 @@
+<div *ngIf="reviewList && reviewList.length > 0" class="review-card-container">
+  <div class="review-card"
+    *ngFor="let item of reviewList; let i = index"
+    [ngClass]="{'card-active': selectedIndex === i}">
+    <img [src]="item.url">
+    <div class="review-card-title">{{item.title}}</div>
+    <div class="review-card-rating">
+      <ngb-rating [max]="5" [readonly]="false" class="rating">
+       </ngb-rating>
+    </div>
+    <div class="review-card-text">{{item.text}}</div>
+  </div>
+  <div *ngIf="indicators" class="carousel-dot-container">
+    <span *ngFor="let dot of reviewList; let i = index"
+          class="dot"
+          [ngClass]="{'active': selectedIndex === i}"
+          (click)="selectCard(i)"
+    >
+    </span>
+  </div>
+  <div class="btn-carousel-container">
+    <div *ngIf="controls" class="btn-carousel btn-prev">
+      <div class="icon-carousel"
+           (click)="onPrevClick()">
+        <img src="assets/icon/review/review-arrow-left.svg">
+      </div>
+    </div>
+    <div *ngIf="controls" class="btn-carousel btn-next">
+      <div class="icon-carousel"
+           (click)="onNextClick()">
+        <img src="assets/icon/review/review-arrow-right.svg">
+      </div>
+    </div>
+  </div>
+</div>

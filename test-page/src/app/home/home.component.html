@@ -1,0 +1,112 @@
+<app-header></app-header>
+<div class="section-home section">
+  <div class="section-content-social">
+    <a href="#" class="social"><img src="assets/icon/good-food/goodfoot-icon-social-facebook.svg" alt=""></a>
+    <a href="#" class="social"><img src="assets/icon/good-food/goodfoot-icon-social-link.svg" alt=""></a>
+    <a href="#" class="social"><img src="assets/icon/good-food/goodfoot-icon-social-twitter.svg" alt=""></a>
+  </div>
+  <div class="section-images">
+    <div class="images medium-img"><img src="assets/img/goodfood/goodfoot-img-ring-medium.svg" alt=""></div>
+    <div class="images big-img"><img src="assets/img/goodfood/goodfoot-img-ring-big.svg" alt=""></div>
+    <div class="images small-img"><img src="assets/img/goodfood/goodfoot-img-ring-small.svg" alt=""></div>
+    <div class="images img-kkal">
+      <p class="kkal-text">480 kkal</p>
+      <img src="assets/img/goodfood/goodfoot-img-ring-kkal.png" alt="">
+    </div>
+    <div class="images img-tomato"><img src="assets/img/goodfood/goodfoot-img-tomato0.png" alt=""></div>
+    <div class="images img-tomato-second"><img src="assets/img/goodfood/goodfoot-img-tomato1.png" alt=""></div>
+    <div class="images first">
+      <img src="assets/img/goodfood/goodfoot-img.png" alt="">
+    </div>
+  </div>
+  <div class="section-content">
+    <div class="section-content-title title">GOOD FOOD</div>
+    <div class="section-content-img">
+      <img src="assets/icon/good-food/goodfoot-icon-line.svg" alt="black line">
+    </div>
+    <div class="section-content-text text">
+      In eu duis proident et in. Officia sunt tempor mollit veniam proident duis mollit pariatur esse est in incididunt
+      esse.
+    </div>
+    <div class="section-content-button">
+      <button class="link btn">menu</button>
+      <button class="link btn">order food</button>
+    </div>
+  </div>
+  <div class="section-content-arrow">
+    <img (click)="onDownPage()" class="content-arrow-images" src="assets/icon/good-food/goodfoot-icon-arrow-down.svg" alt="">
+  </div>
+</div>
+<div class="section-dishes section">
+  <div class="dishes-background"><img src="assets/img/dishes/background.png" alt=""></div>
+  <div class="container">
+    <div class="section-card-container">
+      <div class="section-card">
+        <div class="card-info">
+          <img src="assets/icon/dishes/ring.svg" alt="">
+          <img class="point" src="assets/icon/dishes/point.svg" alt="">
+          <p class="card-info-text">430kkal</p>
+          <p class="card-info-price">$24</p>
+        </div>
+        <div class="card">
+          <img class="card-img title-img" src="assets/img/dishes/img-0.png" alt="">
+          <p class="card-title dishes-subtitle">Fish & salad</p>
+          <p class="card-subtitle">In eu duis proident et in. Officia sunt tempor mollit veniam proident duis mollit
+            pariatur
+            esse est in incididunt esse. </p>
+          <div class="card-button">
+            <button class="btn">menu</button>
+            <button>order</button>
+          </div>
+        </div>
+      </div>
+      <div class="section-card">
+        <img class="card-img" src="assets/img/dishes/img-1.png" alt="">
+        <p class="card-title dishes-subtitle">Fish & salad # 2</p>
+        <p class="card-text dishes-text">410 kkal / <span>$ 26</span></p>
+        <button>order</button>
+      </div>
+      <div class="section-card card-third">
+        <img class="card-img" src="assets/img/dishes/img-2.png" alt="">
+        <p class="card-title dishes-subtitle">Pasta</p>
+        <p class="card-text dishes-text">540 kkal / <span> $ 43</span></p>
+        <button>order</button>
+      </div>
+      <div class="section-card">
+        <img class="card-img" src="assets/img/dishes/img-3.png" alt="">
+        <p class="card-title dishes-subtitle">Fish & salad # 3</p>
+        <p class="card-text dishes-text">412 kkal / <span>$ 32</span></p>
+        <button>order</button>
+      </div>
+    </div>
+    <div class="section-dishes-title">
+      <p class="logo">DISHES OF THE DAY</p>
+      <img src="assets/icon/dishes/line.svg" alt="">
+    </div>
+  </div>
+</div>
+<div class="section-why section">
+  <div class="container">
+    <div class="title-container">
+      <p class="why-title logo">WHY WE?</p>
+      <img src="assets/icon/why/line.svg" alt="">
+    </div>
+    <div class="why-card-container">
+      <div class="why-card" *ngFor="let item of iconList">
+        <img [src]="item.url">
+        <div class="dishes-subtitle card-title">{{item.title}}</div>
+        <div class="dishes-text card-text">{{item.text}}</div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="reviews-section section" id="review">
+  <div class="review-ring"></div>
+  <div class="title-container-review">
+    <p class="why-title logo">Reviews</p>
+    <img src="assets/icon/why/line.svg" alt="">
+  </div>
+  <app-slider [reviewList]="reviewList"></app-slider>
+</div>
+<app-footer></app-footer>
+<!-- <img src="assets/img/review/gray-ring.png" alt=""> -->

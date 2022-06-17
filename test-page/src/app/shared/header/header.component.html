@@ -1,0 +1,32 @@
+<header class="section">
+  <div class="container">
+    <div class="header-logo logo">
+      GF.
+    </div>
+    <nav>
+      <div class="header-menu">
+        <div class="header-link">
+          <a class="link" href="#">Home</a>
+          <a class="link" href="#">Menu</a>
+          <a class="link" href="#">Delivery</a>
+        </div>
+        <div class="header-icon">
+          <div class="icon"><img src="assets/icon/good-food/goodfoot-icon-search.svg" alt="search icon"></div>
+          <div class="icon"><img src="assets/icon/good-food/goodfoot-icon-basket.svg" alt="basket icon"></div>
+        </div>
+      </div>
+      <div class="header-menu-mobile">
+        <button class="burger-menu" mat-button [matMenuTriggerFor]="menu">
+          <mat-icon>format_align_justify</mat-icon>
+        </button>
+        <mat-menu #menu="matMenu">
+          <button mat-menu-item>Home</button>
+          <button mat-menu-item>Menu</button>
+          <button mat-menu-item>Delivery</button>
+          <button mat-menu-item><img src="assets/icon/good-food/goodfoot-icon-search.svg"></button>
+          <button mat-menu-item><img src="assets/icon/good-food/goodfoot-icon-basket.svg"></button>
+        </mat-menu>
+      </div>
+    </nav>
+  </div>
+</header>
